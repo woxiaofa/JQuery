@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>无标题文档</title>
+  <script src="jquery-3.0.0.min.js"></script>
+  <style>
+    .dd {
+      border: 1px solid #333;
+      background: red;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="dd"></p>
+  <script>
+    $(function () {
+      var
+        x = jQuery(window).height();
+      y = "286";
+      x1 = jQuery(window).width();
+      y1 = "320";
+      z = x - y;
+      z1 = x1 - y1;
+
+      $(".dd").width(z1).height(z);
+
+
+
+      window.onresize = function () {
+        var
+          x = jQuery(window).height();
+        y = "286";
+        x1 = jQuery(window).width();
+        y1 = "320";
+        z = x - y;
+        z1 = x1 - y1;
+
+
+
+        $(".dd").width(z1).height(z);
+      };
+
+
+    });
+
+  </script>
+</body>
+
+</html>

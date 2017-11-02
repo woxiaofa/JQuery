@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>芥末堆聊新闻</title>
+  <script src="jquery-3.0.0.min.js"></script>
+  <style>
+    html {
+      width: 100%;
+      height: 100%;
+    }
+    
+    ul,
+    ol,
+    dl,
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-family: "微软雅黑"
+    }
+    
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      background: #f6f6f6;
+      padding: 30px 0 100px 0;
+      box-sizing: border-box;
+    }
+    
+    header {
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 50px;
+      background: #ccc;
+      z-index: 999
+    }
+    
+    article {
+      max-width: 750px;
+      height: 100%;
+      margin: 0 auto;
+      background: #f6f6f6;
+      overflow: auto;
+    }
+    
+    article ul {
+      padding: 0 15px;
+      display: none;
+      clear: both
+    }
+    
+    article ol {
+      padding: 0 15px;
+      clear: both
+    }
+    
+    article li {
+      border-radius: 15px;
+      clear: both;
+      color: #333;
+      font-size: 16px;
+      margin: 8px 0;
+      padding: 6px 15px;
+    }
+    
+    article li img {
+      width: 100%
+    }
+    
+    .jmd {
+      background: #fff;
+      border-top-left-radius: 0;
+      float: left;
+      line-height: 28px;
+      white-space: normal;
+      word-break: break-all;
+    }
+        article li button{background: #f39800;border-radius: 15px;}
+
+    .user {
+      background: #ededed;
+      border-bottom-right-radius: 0;
+      float: right;
+      line-height: 28px;
+      white-space: normal;
+      word-break: break-all;
+    }
+    
+    .btnbox {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      z-index: 999;
+      box-sizing: border-box;
+    }
+    
+    button {
+      background: #006aa4;
+      border-radius: 15px 15px 0 15px;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      height: 34px;
+      margin: 12px 5px 0;
+      padding: 0 15px;
+      display: inline-block
+ 
+    }
+    
+ 
+    
+    #a1 {
+      display: block
+    }
+  </style>
+</head>
+
+<body>
+  <!--<header>芥末堆</header>-->
+  <article>
+    <div id="textbox">
+      <ul id="a1">
+        <li class="jmd">Hi，datatime好！</li>
+        <li class="jmd">14个月股价暴涨15倍的全通的转型路</li>
+
+      </ul>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="btnbox">
+      <tr>
+        <td align="center">
+           <button class="btn1">添加文章</button>
+           <button class="btn2">添加用户引导</button>
+        </td>
+      </tr>
+    </table>
+
+    <script>
+$(function(){
+  $("button.btn1").click(function(){
+    $("ul").append("<li class='jmd'><button>文字</button><button>图片</button><button>视频</button><button>图表</button><button>文章</button></li>");
+  }
+  );
+
+  $("button.btn2").click(function(){
+    $("ul").append("<li class='user'><button>文字</button> <button>表情图片</buttom></li>");  
+  }
+  );
+}
+)
+</script>
+
+  </article>
+</body>
+
+</html>

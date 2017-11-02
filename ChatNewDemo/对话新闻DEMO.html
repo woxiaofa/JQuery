@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>芥末堆聊新闻</title>
+  <script src="jquery-3.0.0.min.js"></script>
+  <style>
+    html {
+      width: 100%;
+      height: 100%;
+    }
+    
+    ul,
+    ol,
+    dl,
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      font-family: "微软雅黑"
+    }
+    
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      background: #f6f6f6;
+      padding: 30px 0 100px 0;
+      box-sizing: border-box;
+    }
+    
+    header {
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 50px;
+      background: #ccc;
+      z-index: 999
+    }
+    
+    article {
+      max-width: 750px;
+      height: 100%;
+      margin: 0 auto;
+      background: #f6f6f6;
+      overflow: auto;
+    }
+    
+    article ul {
+      padding: 0 15px;
+      display: none;
+      clear:both
+    }
+      article ol {
+      padding: 0 15px;
+      clear:both
+     
+    }
+    
+    article  li {
+      border-radius: 15px;
+      clear: both;
+      color: #333;
+      font-size: 16px;
+      margin: 8px 0;
+      padding: 6px 15px;
+    }
+    
+    article  li img {
+      width: 100%
+    }
+    
+    .jmd {
+      background: #fff;
+      border-top-left-radius: 0;
+      float: left;
+      line-height: 28px;
+      white-space: normal;
+      word-break: break-all;
+    }
+    
+    .user {
+      background: #ededed;
+      border-bottom-right-radius: 0;
+      float: right;
+      line-height: 28px;
+      white-space: normal;
+      word-break: break-all;
+    }
+    
+    .btnbox {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      z-index: 999;
+      box-sizing: border-box;
+    }
+    
+    button {    
+      background: #006aa4;
+      border-radius: 15px 15px 0 15px;  
+      color: #fff;
+      font-size: 16px;
+      border: none;      
+      height: 34px;
+      margin: 12px 5px 0;
+      padding: 0 15px;
+      display: inline;
+      display: none;
+    }
+    .btn1 ,.btn2 {display:inline-block}
+
+   
+    
+    #a1 {
+      display: block
+    }
+  </style>
+</head>
+
+<body>
+  <!--<header>芥末堆</header>-->
+  <article>
+    <div id="textbox">
+    <ul id="a1">
+      <li class="jmd">Hi，下午好！</li>
+      <li class="jmd">14个月股价暴涨15倍的全通的转型路</li>     
+    </ul>
+    <ul id="a2">
+      <li class="user">说说看？</li>
+      <li class="jmd">“2015年24元/股，2016年260元/股”，上市仅一年有余，全通教育的股价从 24.16 元/股飙升至 265 元/股，到了 2015 年 5 月，其股价更是冲到 379.69，14个月暴涨了15倍的股价，同时打破了A股历史记录，市盈率曾高达
+        854 倍，远超创业板平均 90 倍的估值水平，这也让其股价做了一回过山车。</li>
+      <li class="jmd"><img src="https://cdn.jiemodui.com/img/Public/Uploads/item/20161202/1480614048165540.png" /></li>
+    </ul>
+    <ul id="a3">
+      <li class="user">为什么？</li>
+      <li class="jmd">赶上了 A 股的好时候，全通教育凭借教育股的概念在资本市场获得了空前的关注，当然其中不少是质疑的声音，“主营业务无以为继”、“除了玩概念就是个空壳子”、“市值一周蒸发 100 亿”</li>
+      <li class="jmd"><img src="http://pic.baike.soso.com/p/20140320/20140320133810-1847860921.jpg" /></li>
+    </ul>
+    <ul id="a4">
+      <li class="user">他们做了什么？</li>
+      <li class="jmd">从 2015 年下半年开始，全通教育聚焦经营，抓营业额、增长率、渗透率和覆盖率，从财报数字上看，其业绩处于快速增长中。2016 年上半年，全通教育的总营收超过 4 亿元，而上市之前的 2013 年上半年则为 8586 万元。拆股之后，目前其股价稳定在
+        25 元左右，总市值 160 亿人民币，市盈率（LYR）仍然高达 170。</li>
+    </ul>
+    <ul id="a5">
+      <li class="user">然后呢？</li>
+      <li class="jmd">得益于资本市场的利好，资金雄厚的全通教育通过收购与整合的手段，已经逐步从单一的家校通服务商转型为教育信息化服务商。</li>
+    </ul>
+    <ul id="a6">
+      <li class="user">详细点</li>
+      <li class="jmd">自 2010-2013 年间，家校互动信息服务一直是全通教育的重点推进业务，其收入占主营业务收入比重超过 96%。而到 2016 财年上半年，这一比重已经下降到 37%，其重头业务已经变成 EdSasS 业务，即全课云平台。截至
+        2016 年 8 月，全课云有 11323 所签约合作学校，覆盖 23 个省的 120 多个地市。</li>
+      <li class="jmd">2016 年 8 月，在全课云 2.0 发布会上，全通教育推出了校园信息官（CIO）的概念，并在全国各地培养了 1300 多名校园 CIO，做校园信息化服务，正如全课云的宣传语“云在天边，人在眼前”。正是这些每天接触老师和学校的服务人员帮助老师和学校解决产品使用过程中的问题，并挖掘当地用户的需求，负责产品的本地化。</li>
+      <li class="jmd"> 在产品设计上，注重细节，不断优化，更加贴近他们的使用习惯，让产品更加简单易用。比如移动校园，对于很微小的几个界面之间的交互，几个模块之间很细小功能的重新组织、组合都是基于用户的数据分析和行为观察基础之上，每个星期、每个月不断地进行大大小小的迭代，最后把这个产品模块打磨得让所有老师更易用。</li>
+    </ul>
+    <ul id="a7">
+      <li class="user">还有么？</li>
+      <li class="jmd">他们尝试做 C 端产品。当时推出了一款直接针对学生的多媒体教辅产品，想通过手里的渠道进行推广，然而效果并不好。之后他们内部反思得出的结论是：B2B or B2C，必须聚焦。</li>
+      <li class="jmd">在教育市场上，根据全通的经验，2B 市场是个求异的市场，追求个性化，而 2C 的市场是求同的市场，这是两条不同的产品线。未来如果再次尝试 C 端产品，全通更有可能会选择独立孵化。</li>
+      <li class="jmd">投资上也有调整</li>
+      <li class="jmd">在上市初期，主要通过收购扩展渠道，先后收购了 4 个省当地最大的校讯通公司，使得全通成为全国范围内最大的教育信息服务提供商。同时，像继教网的收购则是以财务收购为主，目前并不存在业务上的协同性。</li>
+      <li class="jmd">从今年开始关注产品和技术的积累，加强对研发的投入，比如针对西安智园的收购。</li>
+    </ul>
+    <ul id="a8">
+      <li class="user">全课云覆盖了上万所学校</li>
+      <li class="user">日本的地铁公司、培训机构、健身俱乐部都在做托管？</li>
+    </ul></div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="btnbox">
+      <tr>
+        <td align="center">
+         <a href="#a3"> <button class="btn1">说说看</button></a>
+          <button class="btn11">为什么？</button>
+          <button class="btn111">他们做了什么？</button>
+          <button class="btn1111">然后呢？</button>
+          <button class="btn11111">详细点</button>
+          <button class="btn111111">还有么？</button>
+ 
+          <button class="btn2">不看了</button>
+        </td>
+      </tr>
+    </table>
+
+    <script>
+$(function(){
+  $("button.btn1").click(function(){
+    // $("ul").append("<li class='user'>说说看？</li><li class='jmd'>“2015年24元/股，2016年260元/股”，上市仅一年有余，全通教育的股价从 24.16 元/股飙升至 265 元/股，到了 2015 年 5 月，其股价更是冲到 379.69，14个月暴涨了15倍的股价，同时打破了A股历史记录，市盈率曾高达 854 倍，远超创业板平均 90 倍的估值水平，这也让其股价做了一回过山车。</li><li class='jmd'><img src='https://cdn.jiemodui.com/img/Public/Uploads/item/20161202/1480614048165540.png' /></li>");
+    // $("#bb1").css("display""none");
+    // $("#bb2").css("display""block");
+    $("ul#a2").css("display","block");
+    $("button.btn1").hide();
+    $("button.btn11").css("display","inline-block");
+  }
+  );
+  
+  $("button.btn2").click(function(){
+    $("div#textbox").append("<ol><li class='user'>不看了。。</li><li class='jmd'><img src='11.gif'/></li></ol>");
+    $("button").hide();
+  }
+  );
+
+    $("button.btn11").click(function(){
+    $("ul#a3").css("display","block");
+    $("button.btn11").hide();
+    $("button.btn111").css("display","inline-block");
+  }
+  );
+
+      $("button.btn111").click(function(){
+    $("ul#a4").css("display","block");
+    $("button.btn111").hide();
+    $("button.btn1111").css("display","inline-block");
+  }
+  );
+
+      $("button.btn1111").click(function(){
+    $("ul#a5").css("display","block");
+    $("button.btn1111").hide();
+    $("button.btn11111").css("display","inline-block");
+  }
+  );
+
+     $("button.btn11111").click(function(){
+    $("ul#a6").css("display","block");
+    $("button.btn11111").hide();
+    $("button.btn111111").css("display","inline-block");
+  }
+  );
+
+       $("button.btn111111").click(function(){
+    $("ul#a6").css("display","block");
+    $("button.btn111111").hide();
+    $("button.btn1111111").css("display","inline-block");
+  }
+  );
+}
+)
+</script>
+
+  </article>
+</body>
+
+</html>
